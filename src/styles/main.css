@@ -22,18 +22,14 @@ main {
   align-items: center;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
   max-width: 65%;
   width: 100%;
-  margin-right: 0.1rem;
 }
 
 .input-group:nth-child(1) {
   margin-top: 1.4rem;
-}
-
-.input-group:nth-last-child(1) {
-  margin-bottom: 0.1rem;
 }
 
 .input-group label {
@@ -48,4 +44,12 @@ main {
 
 .accordion-icon {
   color: var(--color-primary);
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.flex-start {
+  align-items: flex-start;
 }

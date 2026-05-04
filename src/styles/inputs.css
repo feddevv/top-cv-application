@@ -1,4 +1,5 @@
-input {
+input,
+textarea {
   border: var(--color-border) solid 2px;
   border-radius: 0.2rem;
   padding: 0.4rem;
@@ -6,6 +7,8 @@ input {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: var(--color-primary) solid 2px;
+  outline-offset: -2px;
 }
