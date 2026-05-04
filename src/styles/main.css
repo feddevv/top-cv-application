@@ -1,43 +1,51 @@
-:root {
-  /* Main */
-  --color-bg: #f5f7fa;
-  --color-surface: #ffffff;
-  --color-border: #e2e8f0;
-
-  /* Text */
-  --color-text-primary: #1e293b;
-  --color-text-secondary: #64748b;
-  --color-text-muted: #94a3b8;
-
-  /* Аcent */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-light: #dbeafe;
-
-  /* Icons / secondary accent */
-  --color-accent: #3b82f6;
-
-  /* States */
-  --color-success: #22c55e;
-  --color-error: #ef4444;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
-
-  /* Radiuses */
-  --radius: 10px;
+main {
+  display: flex;
+  flex: 1;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.form-section {
+  background-color: #fff;
+  border-right: var(--color-border) solid 1px;
+
+  flex: 1;
+
+  padding: 1rem;
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text-primary);
+.cv-section {
+  flex: 2;
+}
 
-  font-family: 'Inter', system-ui, sans-serif;
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group input {
+  max-width: 65%;
+  width: 100%;
+  margin-right: 0.1rem;
+}
+
+.input-group:nth-child(1) {
+  margin-top: 1.4rem;
+}
+
+.input-group:nth-last-child(1) {
+  margin-bottom: 0.1rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.accordion-icon {
+  color: var(--color-primary);
 }
