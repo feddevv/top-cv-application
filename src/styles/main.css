@@ -14,6 +14,8 @@ main {
 
 .cv-section {
   flex: 2;
+
+  padding: 1rem;
 }
 
 .input-group {
