@@ -9,8 +9,6 @@ export default function Header() {
         <FileText size={32} color="var(--color-primary)" />
         CV Builder
       </h1>
-
-      <Button type="primary">Download CV</Button>
     </header>
   )
 }

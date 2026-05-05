@@ -2,13 +2,8 @@ import Input from '../components/Input'
 import Label from '../components/Label'
 import '../styles/main.css'
 import Accordion from '../components/Accordion'
-import {
-  CircleUserRound,
-  GraduationCap,
-  BriefcaseBusiness,
-  icons,
-} from 'lucide-react'
-import { PDFViewer } from '@react-pdf/renderer'
+import { CircleUserRound, GraduationCap, BriefcaseBusiness } from 'lucide-react'
+import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer'
 import CV from '../components/CV'
 import { useState } from 'react'
 
@@ -28,6 +23,28 @@ export default function Main() {
   return (
     <main>
       <section className="form-section">
+        <PDFDownloadLink
+          document={
+            <CV
+              fullname={fullname}
+              position={position}
+              email={email}
+              phone={phone}
+              schoolName={schoolName}
+              titleOfStudy={titleOfStudy}
+              dateOfStudy={dateOfStudy}
+              companyName={companyName}
+              responsibilities={responsibilities}
+              from={from}
+              to={to}
+            />
+          }
+          fileName="cv.pdf"
+        >
+          {({ blob, url, loading, error }) =>
+            loading ? 'Document generation' : 'Download PDF now'
+          }
+        </PDFDownloadLink>
         <form action="" noValidate>
           <Accordion
             icon={<CircleUserRound className="accordion-icon" />}
