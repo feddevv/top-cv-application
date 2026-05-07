@@ -4,7 +4,6 @@ import {
   View,
   Document,
   StyleSheet,
-  Font,
   PDFDownloadLink,
 } from '@react-pdf/renderer'
 import { Mail, Phone } from './icons/PDFIcons'
@@ -143,8 +142,6 @@ export default function CV({
             <Text style={styles.text}>{responsibilities}</Text>
           </>
         )}
-
-        <PDFDownloadLink fileName="cv">Download</PDFDownloadLink>
       </Page>
     </Document>
   )

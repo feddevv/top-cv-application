@@ -1,5 +1,4 @@
 import { FileText } from 'lucide-react'
-import Button from '../components/Button'
 import '../styles/header.css'
 
 export default function Header() {
