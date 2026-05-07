@@ -41,14 +41,17 @@ export default function Main() {
           }
           fileName="cv.pdf"
         >
-          {({ blob, url, loading, error }) =>
+          {({ loading }) =>
             loading ? 'Document generation' : 'Download PDF now'
           }
         </PDFDownloadLink>
         <form action="" noValidate>
           <Accordion
-            icon={<CircleUserRound className="accordion-icon" />}
+            icon={
+              <CircleUserRound aria-hidden={true} className="accordion-icon" />
+            }
             title="1. General information"
+            id="accord-1"
           >
             <div className="input-wrapper">
               <div className="input-group">
@@ -85,8 +88,11 @@ export default function Main() {
           </Accordion>
 
           <Accordion
-            icon={<GraduationCap className="accordion-icon" />}
+            icon={
+              <GraduationCap aria-hidden={true} className="accordion-icon" />
+            }
             title="2. Education"
+            id="accord-2"
           >
             <div className="input-wrapper">
               <div className="input-group">
@@ -123,8 +129,14 @@ export default function Main() {
           </Accordion>
 
           <Accordion
-            icon={<BriefcaseBusiness className="accordion-icon" />}
+            icon={
+              <BriefcaseBusiness
+                aria-hidden={true}
+                className="accordion-icon"
+              />
+            }
             title="3. Practical Experience"
+            id="accord-3"
           >
             <div className="input-wrapper">
               <div className="input-group">
@@ -188,6 +200,8 @@ export default function Main() {
         <PDFViewer
           showToolbar={false}
           style={{ width: '100%', height: '100%' }}
+          className="pdf-preview"
+          title="Pdf preview"
         >
           <CV
             fullname={fullname}
